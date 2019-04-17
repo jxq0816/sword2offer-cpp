@@ -3,4 +3,5 @@ project(sword2offer_cpp)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(movingCount movingCount.cpp )
+add_executable(MovingCount MovingCount.cpp)
+add_executable(ReverseList ReverseList.cpp)
