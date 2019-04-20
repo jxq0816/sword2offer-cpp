@@ -5,3 +5,4 @@ set(CMAKE_CXX_STANDARD 11)
 
 add_executable(MovingCount MovingCount.cpp)
 add_executable(ReverseList ReverseList.cpp)
+add_executable(Convert Convert.cpp)
