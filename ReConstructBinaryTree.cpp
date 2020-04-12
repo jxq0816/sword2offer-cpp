@@ -67,9 +67,9 @@ public:
         if(treeNode==NULL){
             return;
         }
-        preVisit(treeNode->left);
+        midVisit(treeNode->left);
         cout << treeNode->val << ",";
-        preVisit(treeNode->right);
+        midVisit(treeNode->right);
     }
 };
 
