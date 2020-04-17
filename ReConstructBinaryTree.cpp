@@ -34,21 +34,21 @@ public:
         //将先序的遍历结果分成两份，一份是左子树，一份是右子树
         int leftlength = rootIndex;
         int rightlength = size - 1 - rootIndex;
-        vector<int> preLeft(rootIndex),vinLeft(rootIndex);;
+        vector<int> preLeft(leftlength),vinLeft(leftlength);;
         vector<int> preRight(rightlength),vinRight(rightlength);
 
         // 把左右子树填写好
         for(int i = 0; i < size; i++)
         {
-            if(i < rootIndex)
+            if(i < leftlength)
             {
                 preLeft[i] = pre[i+1];
                 vinLeft[i] = vin[i];
             }
-            else if(i > rootIndex)
+            else if(i > leftlength)
             {
-                preRight[i-rootIndex-1] = pre[i];
-                vinRight[i-rootIndex-1] = vin[i];
+                preRight[i-leftlength-1] = pre[i];
+                vinRight[i-leftlength-1] = vin[i];
             }
         }
         treeNode->left=reConstructBinaryTree(preLeft,vinLeft);
